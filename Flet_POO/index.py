@@ -1,4 +1,7 @@
 import flet as ft #Importamos la libreria
+import Proyecto as POO
+
+
 def main (page: ft.Page):
     page.bgcolor=ft.colors.BLUE_GREY_800 #Cambiar color de la interfaz
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER #Centrar los elementos CrossAxisAligment.???
