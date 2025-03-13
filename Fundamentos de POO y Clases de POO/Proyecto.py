@@ -73,8 +73,10 @@ class Carrito:
             print(f"{Producto.nombre} no esta disponible.")
 
     def mostrar_productos(self):
+        return "\n".join(str(p) for p in self.lstProductos) if self.lstProductos else "Carrito vacio"
         for p in self.lstProductos:
             print (f"{p.Nombre}: ${p.precio}")
 
 
 
+cliente = Cliente("Ana", "Ana@gmail.com",1244)
