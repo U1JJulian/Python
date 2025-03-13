@@ -68,31 +68,28 @@ def menu_tienda(cliente, carrito, tienda):
             print("Opción no válida. Intenta de nuevo.")
 
      
-if __name__ == "__main__":
 
-    #Creamos una lista de clientes que puedan tener acceso a la tienda
-    lstUsuarios = {
-    "JJulian":"03JJulianU1@gmail.com"
-    }
-    # Iniciar sesión
-    usuario = iniciar_sesion()
+#Creamos una lista de clientes que puedan tener acceso a la tienda
+lstUsuarios = {"JJulian":"03JJulianU1@gmail.com"}
+# Iniciar sesión
+usuario = iniciar_sesion()
 
-    # Crear cliente (según el usuario autenticado)
-    cliente = POO.Cliente(usuario, f"{lstUsuarios[usuario]}")
+# Crear cliente (según el usuario autenticado)
+cliente = POO.Cliente(usuario, f"{lstUsuarios[usuario]}")
 
-    # Crear productos
-    p1 = POO.Producto("Laptop", 1000, 5)
-    p2 = POO.ProductoDigital("Curso de Python", 200)
-    p3 = POO.Producto("Mouse", 40, 12)
+# Crear productos
+p1 = POO.Producto("Laptop", 1000, 5)
+p2 = POO.ProductoDigital("Curso de Python", 200)
+p3 = POO.Producto("Mouse", 40, 12)
 
-    # Crear tienda y agregar productos
-    tienda = POO.Tienda()
-    tienda.agregar_al_catalogo(p1)
-    tienda.agregar_al_catalogo(p2)
-    tienda.agregar_al_catalogo(p3)
+# Crear tienda y agregar productos
+tienda = POO.Tienda()
+tienda.agregar_al_catalogo(p1)
+tienda.agregar_al_catalogo(p2)
+tienda.agregar_al_catalogo(p3)
 
-    # Crear carrito (vacío al inicio)
-    carrito = POO.Carrito()
+# Crear carrito (vacío al inicio)
+carrito = POO.Carrito()
 
-    # Mostrar menú de la tienda
-    menu_tienda(cliente, carrito, tienda)
+# Mostrar menú de la tienda
+menu_tienda(cliente, carrito, tienda)
