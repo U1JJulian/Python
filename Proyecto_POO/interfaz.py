@@ -69,8 +69,6 @@ def menu_tienda(cliente, carrito, tienda):
 
      
 
-#Creamos una lista de clientes que puedan tener acceso a la tienda
-lstUsuarios = {"JJulian":"03JJulianU1@gmail.com"}
 # Iniciar sesión
 usuario = iniciar_sesion()
 
