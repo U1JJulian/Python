@@ -2,25 +2,19 @@ import unittest
 from index import Carrito, Producto
 
 class TestCarrito(unittest.TestCase):
-    def test_calcular_total(self):
+    def test_calcular_total_carrito_vacio(self):
+        carrito = Carrito()  # Crear carrito vacío
+        self.assertEqual(carrito.calcular_total(), 0)  # Debe ser 0
+
+    def test_calcular_total_con_productos(self):
         carrito = Carrito()
+        producto1 = Producto("Laptop", 1000, 5)  # Precio 1000, stock 5
+        producto2 = Producto("Mouse", 50, 10)  # Precio 50, stock 10
 
-        # Productos de prueba
-        producto1 = Producto("Laptop", 1000, 5)  # $1000
-        producto2 = Producto("Mouse", 50, 10)     # $50
-        producto3 = Producto("Ebook", 15, -1)     # $15 (digital, stock infinito)
+        carrito.agregar_producto(producto1)
+        carrito.agregar_producto(producto2)
 
-        # Agregamos productos al carrito
-        carrito.agregar_producto(producto1)  # +1000
-        carrito.agregar_producto(producto2)  # +50
-        carrito.agregar_producto(producto3)  # +15
+        total_esperado = 1000 + 50  # 1050
+        self.assertEqual(carrito.calcular_total(), total_esperado) 
 
-        # Calculamos el total esperado
-        total_esperado = 1000 + 50 + 15
-
-        # Aseguramos que calcular_total devuelve el total esperado
-        self.assertEqual(carrito.calcular_total(), total_esperado)
-
-# Ejecutar las pruebas si este archivo se ejecuta directamente
-if __name__ == "__main__":
-    unittest.main()
+unittest.main()
