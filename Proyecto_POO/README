@@ -1,0 +1,11 @@
+JOSE JULIAN GONZALEZ MEDRANO #21100215
+
+En esta carpeta se encuentras 3 archivos 
+
+index.py: Se encuentra todo el codigo, clases y sus respectivos metodos.
+
+interfaz.py: Este archivo es el que se tiene que ejecutar 
+porque es el que hice el simulador (solo exporte el archivo index.py a este nuevo archivo para que se vea mas limpio y entendible)
+y ahi agrego datos para el funcionamiento de la simulacion.
+
+prueba_unitaria.py: Se encuentra el codigo con sus respectivas comprobaciones unitarias
