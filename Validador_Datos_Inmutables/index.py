@@ -1,7 +1,7 @@
 # Control de Calidad de Productos en una Fábrica
 # Programación Funcional en Python
 
-from typing import Tuple, List
+from typing import Tuple
 
 # Definimos una tupla para representar un producto (peso, largo, ancho, alto, lote)
 Producto = Tuple[float, float, float, float, str]
