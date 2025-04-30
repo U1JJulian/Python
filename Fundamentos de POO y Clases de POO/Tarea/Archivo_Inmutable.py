@@ -1,3 +1,5 @@
+#Alumno: Jose Julian Gonzalez Medrano
+#No. Control: 21100215
 from collections import namedtuple
 
 # Definición de estructuras inmutables
